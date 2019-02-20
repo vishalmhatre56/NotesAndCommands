@@ -1,0 +1,39 @@
+step1:  Create and push project on gitHub.(project must have package.json)
+
+step2: 	goto www.heroku.com and sign up or log in.
+
+step3:	install heroku (old: toolbelt.heroku.com ==> redirect to diff website[https://devcenter.heroku.com/articles/heroku-cli]).
+	click on : Download and install
+	for obuntu run : >sudo snap install --classic heroku
+
+step4: 	>heroku login
+	This will redirect to login page. click login. you will be get message logged in to heroku in console.
+	
+step5:	>heroku keys   <=== this will show all keys in heroku
+	we have to add key:
+	>heroku keys:add
+	it will detect if there is any key available or you will be promted to create new key : enter y
+	this will create new key and add it into heroku keys.
+
+	you can check >heroku keys.
+	
+	and you can also remove keys >heroku keys:remove an readd them.
+
+step6:	>ssh -v git@heroku.com
+	this will connect to heroku server with ssh key and ask you "are you sure want to connect : " enter yes	
+	
+	you will get "authentication succeeded (publickey)" then it will be successfully connected otherwise you will get access denied.
+
+step7:	port number must be dynamic and you can get the port set by heroku server in enviernmen variable.
+	"process.env.PORT"
+
+step8:  you need to add script for start command in package.json (eg: start:"node server.js")
+
+step9:  commit updated code and push it to gitHub.
+
+step10:  run ">heroku create" from projects root folder.
+
+step11:  >git push heroku
+
+step12:  your app will be deployed on heroku if it does not have errors and.
+	 you can visit app by using url that given in logs of step11 command. 
