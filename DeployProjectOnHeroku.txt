@@ -36,4 +36,9 @@ step10:  run ">heroku create" from projects root folder.
 step11:  >git push heroku
 
 step12:  your app will be deployed on heroku if it does not have errors and.
+
+step13:  you can manage your app by visiting herokus.com website.
+
+step14:  you can update your code, add functionality to app and push those changes to gitHub and then run ">git push heroku".
+	 it will update app on heroku server.
 	 you can visit app by using url that given in logs of step11 command. 
