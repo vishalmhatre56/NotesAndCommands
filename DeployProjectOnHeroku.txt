@@ -42,3 +42,29 @@ step13:  you can manage your app by visiting herokus.com website.
 step14:  you can update your code, add functionality to app and push those changes to gitHub and then run ">git push heroku".
 	 it will update app on heroku server.
 	 you can visit app by using url that given in logs of step11 command. 
+
+step15:  to connect to the mongodb : you need to create account on "https://mlab.com/signup/"
+	 and create cluster, then create user and then get url from connect section to connect to the database.
+	 
+	 add your ip address to site to get access to connection.site will automatically detect ip and add it.
+	 then choose connection method as "Connect your application". 
+	 then get url and add your password as follows:
+	 in my case i got following url from site().
+
+	url: Copy the SRV address:
+		mongodb+srv://vishalmhatre56:<PASSWORD>@cluster0-cpvan.mongodb.net/test?retryWrites=true
+	
+      👉My actual connection:
+	mongoose.connect(`mongodb+srv://cluster0-cpvan.mongodb.net/test?retryWrites=true`, {
+    		auth: {
+        		user: 'vishalmhatre56',
+		        password: 'vishal#56',
+		}
+	}).then(()=>{
+    		console.log("Connected to remote MongoDb Server.")
+	}).catch(err => {
+     		console.log("-----\nUnable to connect to the mongodb server,\nError:", err) 
+    	});
+
+step16:  You can manage all your clusters/ projects / collections at:
+	 link:	https://cloud.mongodb.com/v2/5c6e686679358e65d00acaf0#clusters
