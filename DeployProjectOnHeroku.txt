@@ -31,7 +31,7 @@ step8:  you need to add script for start command in package.json (eg: start:"nod
 
 step9:  commit updated code and push it to gitHub.
 
-step10:  run ">heroku create" from projects root folder.
+step10:  run ">heroku create <app name>" from projects root folder.
 
 step11:  >git push heroku
 
